@@ -1,8 +1,9 @@
 import App from '../components/App'
 import Router from 'next/router'
 import axios from 'axios';
+import withAuth from '../helpers/withAuth';
 
-export default class Test extends React.Component {
+class Test extends React.Component {
     constructor(props) {
         super(props);
         this.state = { word: "",
@@ -109,3 +110,5 @@ export default class Test extends React.Component {
         )
     }
 }
+
+export default withAuth(Test);
