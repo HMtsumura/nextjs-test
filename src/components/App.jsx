@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Header'
+// import '../pages/App.css';
 
 const App = ({ children }) => (
   <main>

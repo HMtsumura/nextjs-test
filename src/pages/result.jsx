@@ -18,8 +18,8 @@ const data = {
 };
 
 
-export default function About({ url: { query: { answeredCount, typoCount, typeCount } } }) {
-  data.datasets[0].data = [typeCount,typeCount,answeredCount];
+export default function Result({ url: { query: { answeredCount, typoCount, typeCount } } }) {
+  data.datasets[0].data = [typeCount,30-typoCount,answeredCount];
   return (
     <App>
       <p>You got this in 1 min</p>
