@@ -8,6 +8,7 @@ class List extends React.Component {
         // DBのpostsコレクション内を全て取得した結果 = result
         let result = await new Promise((resolve, reject) => {
             db.collection('results')
+                .orderBy('type_count', 'desc')
                 .get()
                 .then(snapshot => {
                     let data = []
